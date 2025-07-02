@@ -1,17 +1,5 @@
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
-    tiles.setCurrentTilemap(tilemap`level4`)
-    tiles.placeOnRandomTile(mySprite, assets.tile`myTile6`)
-    scene.cameraFollowSprite(mySprite)
-    controller.moveSprite(mySprite)
-})
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile8`, function (sprite, location) {
-    tiles.setCurrentTilemap(tilemap`level4`)
-    tiles.placeOnRandomTile(mySprite, assets.tile`transparency16`)
-    scene.cameraFollowSprite(mySprite)
-    controller.moveSprite(mySprite)
-})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, function (sprite, location) {
-    tiles.setCurrentTilemap(tilemap`level4`)
+    tiles.setCurrentTilemap(tilemap`level0`)
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile4`)
     scene.cameraFollowSprite(mySprite)
     controller.moveSprite(mySprite)
