@@ -1,3 +1,18 @@
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile19`, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, assets.tile`myTile4`)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, assets.tile`myTile4`)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, assets.tile`myTile4`)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile16`, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, assets.tile`myTile4`)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile17`, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, assets.tile`myTile4`)
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, function (sprite, location) {
     tiles.setCurrentTilemap(tilemap`level0`)
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile4`)
