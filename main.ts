@@ -4,6 +4,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile19`, function (sprite, 
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile4`)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
+    tiles.setCurrentTilemap(tilemap`level4`)
+    tiles.placeOnRandomTile(mySprite, assets.tile`myTile22`)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile4`)
 })
@@ -26,15 +30,15 @@ mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
-    . . . . . . . b b . . . . . . . 
-    . . . . . . b 5 5 b . . . . . . 
-    . . . b b b 5 5 1 1 b b b . . . 
-    . . . b 5 5 5 5 1 1 5 5 b . . . 
-    . . . . b d 5 5 5 5 d b . . . . 
-    . . . . c b 5 5 5 5 b c . . . . 
-    . . . . c 5 d d d d 5 c . . . . 
-    . . . . c 5 d c c d 5 c . . . . 
-    . . . . c c c . . c c c . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . 4 4 . . . . . . . 
+    . . . . . . 4 5 5 4 . . . . . . 
+    . . . . . . 2 5 5 2 . . . . . . 
+    . . . . . . . 2 2 . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
