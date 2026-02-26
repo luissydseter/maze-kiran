@@ -4,12 +4,38 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile19`, function (sprite, 
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile4`)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile24`, function (sprite, location) {
+    tiles.setCurrentTilemap(tilemap`level6`)
+    tiles.placeOnRandomTile(mySprite, assets.tile`myTile9`)
+    mySprite = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . e . . e . . . . . . 
+        . . . . . . e e e e . . . . . . 
+        . . . . . . 4 5 5 4 . . . . . . 
+        . . . . . . 2 5 5 2 . . . . . . 
+        . . . . . . . 2 2 . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Player)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
-    tiles.setCurrentTilemap(tilemap`level4`)
+    tiles.setCurrentTilemap(tilemap`level5`)
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile22`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile4`)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile21`, function (sprite, location) {
+    tiles.setCurrentTilemap(tilemap`level4`)
+    tiles.placeOnRandomTile(mySprite, assets.tile`myTile33`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile16`, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile4`)
@@ -20,11 +46,14 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile17`, function (sprite, 
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, function (sprite, location) {
     tiles.setCurrentTilemap(tilemap`level0`)
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile4`)
-    scene.cameraFollowSprite(mySprite)
-    controller.moveSprite(mySprite)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorDark3, function (sprite, location) {
+    tiles.setCurrentTilemap(tilemap`level7`)
 })
 let mySprite: Sprite = null
 tiles.setCurrentTilemap(tilemap`level1`)
+tiles.placeOnRandomTile(mySprite, sprites.dungeon.collectibleBlueCrystal)
+scene.cameraFollowSprite(mySprite)
 mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -43,6 +72,4 @@ mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
-tiles.placeOnRandomTile(mySprite, sprites.dungeon.collectibleBlueCrystal)
-scene.cameraFollowSprite(mySprite)
 controller.moveSprite(mySprite)
